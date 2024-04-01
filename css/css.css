@@ -4,19 +4,62 @@
     box-sizing: border-box;
 }
 
-.navbar{
+/* CSS adicional para a imagem na tag section */
+.card-1 img {
+    width: 100%; /* Define a largura da imagem como 100% da largura do contêiner pai */
+    display: block; /* Garante que a imagem seja exibida como um bloco, ocupando toda a largura disponível */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.card-1 {
+    position: relative; /* Define a posição relativa para o contêiner pai */
+}
+
+.textos {
+    position: absolute; /* Define a posição absoluta para os textos */
+    top: 50%; /* Posiciona os textos no centro verticalmente */
+    left: 50%; /* Posiciona os textos no centro horizontalmente */
+    transform: translate(-50%, -50%); /* Move os textos para o centro da imagem */
+    text-align: center; /* Alinha o texto centralmente */
+    color: white; /* Define a cor do texto como branca */
+}
+
+.textos h2 {
+    font-size: 80px; /* Tamanho da fonte para o título */
+    margin-bottom: 10px; /* Espaçamento inferior entre o título e o parágrafo */
+}
+
+.textos p {
+    font-size: 35px; /* Tamanho da fonte para o parágrafo */
+}
+
+
+/* CSS adicional para ajustar o layout da barra de navegação */
+.navbar {
+    width: 100%;
     height: 56px;
     color: rgb(0, 0, 0);
     background-color: rgba(251, 251, 251, 0.8);
     transition: background-color 0.25s ease-out 0s, color 0.25s ease-out 0s, border-color 150ms ease-out 0s;
+    backdrop-filter: saturate(180%) blur(20px);
+    position: fixed;
+    left: 0; /* Ajusta a barra de navegação à esquerda */
+    top: 0; /* Ajusta a barra de navegação ao topo */
+    z-index: 1000; /* Define a ordem de empilhamento para garantir que a barra de navegação esteja acima de outros elementos */
 }
 
-.logo{
-    padding-left: 250px;
+.logo {
+    padding-left: 20px; /* Ajusta o espaçamento à esquerda do logotipo */
     display: flex;
     align-items: center;
 }
 
-.collapse.navbar-collapse{
-    padding-right: 250px;
+.collapse.navbar-collapse {
+    padding-right: 20px; /* Ajusta o espaçamento à direita da barra de navegação recolhida */
 }
+
+.texto-boas-vindas{
+    margin: 15px;
+    width: 50%;
+}
+
